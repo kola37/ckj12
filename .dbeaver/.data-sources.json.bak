@@ -14,22 +14,6 @@
 				"database": "o3400n4j3kyytvpl",
 				"url": "jdbc:mysql://d3y0lbg7abxmbuoi.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/o3400n4j3kyytvpl",
 				"type": "dev",
-				"auth-model": "native"
-			}
-		},
-		"mysql8-177ca1018d1-5f3fe1f27b6c700": {
-			"provider": "mysql",
-			"driver": "mysql8",
-			"name": "yk6b7gw1uby9hcs1",
-			"save-password": true,
-			"show-system-objects": true,
-			"read-only": false,
-			"configuration": {
-				"host": "d3y0lbg7abxmbuoi.chr7pe7iynqr.eu-west-1.rds.amazonaws.com",
-				"port": "3306",
-				"database": "yk6b7gw1uby9hcs1",
-				"url": "jdbc:mysql://d3y0lbg7abxmbuoi.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/yk6b7gw1uby9hcs1",
-				"type": "dev",
 				"auth-model": "native",
 				"handlers": {}
 			}
