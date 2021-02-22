@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Info file</title>
+<link rel="stylesheet" href="/styles/users.css">
+<link rel="stylesheet" href="/styles/navbar.css">
+</head>
+<body>
+
+	<div th:insert="home :: navbar"></div>
+	<div class="cnt">
+		<div class="search">
+			<form action="/users/search">
+				<input name="name" type="text" placeholder="Search..."
+					autofocus="autofocus">
+				<button type="submit">
+					<img src="/image/search.png">
+				</button>
+			</form>
+		</div>
+
+		<h1>User list</h1>
+
+
+		<div class="user">
+			<table>
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Age</th>
+						<th>Name</th>
+						<th>Gender</th>
+					</tr>
+
+				</thead>
+
+				<tbody>
+
+					<tr th:each="user:${users}">
+
+						<td><span th:text="${user.id}"></span></td>
+						<td><span th:text="${user.name}"></span></td>
+						<td><span th:text="${user.age}"></span></td>
+						<td><span th:text="${user.gender}"></span></td>
+						<td><a title="Edit"
+							th:href="@{/users/set/{id}(id=${user.id})}" class="option"><img
+								src="/image/edit.png"> </a></td>
+						<td><a title="Delete"
+							th:href="@{/users/delete/{id}(id=${user.id})}" class="option"
+							onclick="return confirm('Are you sure?')"> <img
+								src="/image/delete.png"></a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<a href="/users/create">Create new user</a>
+
+	</div>
+</body>
+</html>
