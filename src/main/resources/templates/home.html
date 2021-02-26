@@ -14,8 +14,9 @@
 			<div>
 				<a href="/">Home</a>
 			</div>
+			
 			<div sec:authorize="isAuthenticated()">
-				<a href="/notes/all">Notes</a>
+				<a href="/folders/all">Folders</a>
 			</div>
 			<div sec:authorize="hasRole('ROLE_ADMIN')">
 				<a href="/users/all">Users</a>

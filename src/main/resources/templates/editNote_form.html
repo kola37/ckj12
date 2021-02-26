@@ -11,7 +11,7 @@
 
 		<form action="/notes/change" th:name="note" method="post">
 		<p>
-		<input type="number" th:name="id" th:value="${note.id}" readonly>
+		<input type="number" th:name="id" th:value="${note.id}" hidden="">
 			<p>
 				<input type="text" th:name="name" th:value="${note.name}">
 			<p>

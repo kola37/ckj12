@@ -29,8 +29,14 @@ public class Note {
 	@ManyToOne
 	private User user;
 	
-	public Note(String name, String description) {
+	@ToString.Exclude
+	@ManyToOne
+	private Folder folder;
+	
+	public Note(String name, String description, Folder folder, User user) {
 		this.name=name;
 		this.description=description;
+		this.folder=folder;
+		this.user=user;
 	}
 }

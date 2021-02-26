@@ -12,5 +12,6 @@ public interface NoteRepository extends CrudRepository<Note, Integer>{
 
 	//SELECT * FROM notes WHERE label LIKE '%word' OR message LIKE '%word%'
 	public List<Note> findByNameContainingOrDescriptionContaining(String name, String description);
+	public List <Note> findByUserId(int id);
 	
-}
+	}
