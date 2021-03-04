@@ -30,6 +30,9 @@
 				<a href="/signup" sec:authorize="isAnonymous()">Sign Up</a>
 			</div>
 			<div>
+				<a href="/email" sec:authorize="isAuthenticated()">Send email</a>
+			</div>
+			<div>
 				<a href="/logout" sec:authorize="isAuthenticated()">Logout</a>
 			</div>
 		</div>

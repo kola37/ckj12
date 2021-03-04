@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+	
+</script>
+<script type="text/javascript">
+	$(document).ready(
+			function() {
+				$("#locales").change(
+						function() {
+							var selectedOption = $('#locales').val();
+							if (selectedOption != '') {
+								window.location.replace('international?lang='
+										+ selectedOption);
+							}
+						});
+			});
+</script>
+
+
+</head>
+<body>
+	<form action="/" method="get">
+		<h1 th:text="#{greeting}"></h1>
+
+		<span th:text="#{lang.change}"></span>: <select id="locales">
+
+			<option value=""></option>
+			<option value="en" th:text="#{lang.eng}"></option>
+			<option value="it" th:text="#{lang.it}"></option>
+			<option value="ru" th:text="#{lang.ru}"></option>
+		</select> <input type="submit" value="Select">
+	</form>
+</body>
+</html>

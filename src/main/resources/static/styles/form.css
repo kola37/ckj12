@@ -11,6 +11,18 @@
 	border-radius: 15px;
 }
 
+#send_form {
+	background: rgb(204, 204, 204);
+	margin: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	padding: 10px;
+	border: 2px solid rgb(255, 128, 64);
+	border-radius: 15px;
+	
+}
+
 input[type=text], textarea {
 	width: 80%;
 	resize: none;

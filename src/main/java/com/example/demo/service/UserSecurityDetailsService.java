@@ -35,6 +35,6 @@ public class UserSecurityDetailsService implements UserDetailsService{
 		UserSecurity us = new UserSecurity(user);
 		return us;
 	}
-	
+	 
 
 }

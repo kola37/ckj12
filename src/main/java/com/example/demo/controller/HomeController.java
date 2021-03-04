@@ -13,8 +13,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.demo.model.Message;
 import com.example.demo.model.User;
 import com.example.demo.repo.UserRepository;
+import com.example.demo.service.EmailService;
 import com.example.demo.service.UserService;
 import com.example.demo.service.UsernameExistException;
 
@@ -24,6 +26,7 @@ public class HomeController {
 	
 	private UserRepository userRepository;
 	private UserService userService;
+	
 	
 	@Autowired
 	public HomeController(UserRepository userRepository, UserService userService) {
@@ -76,4 +79,5 @@ public class HomeController {
 		return "redirect:/";
 	}
 	
+
 }
